@@ -1,0 +1,42 @@
+<div class="head">
+  <span class="headline">Create-Company</span>
+</div>
+<div class="content">
+  <form [formGroup]="companyForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Company Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address 2</mat-label>
+      <input matInput formControlName="number">
+    </mat-form-field>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>City</mat-label>
+            <input matInput formControlName="city">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>State</mat-label>
+            <input matInput formControlName="state">
+          </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+            <mat-label>Postal Code</mat-label>
+            <input matInput #postalCode maxlength="5" formControlName="postalCode">
+            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+          </mat-form-field></td>
+      </tr>
+    </table>
+    <div class="buttons">
+      <button mat-raised-button (click)="goBack()"><mat-icon>arrow_left</mat-icon>Go Back</button>
+      <button mat-raised-button (click)="clearForm()"><mat-icon>clear</mat-icon>Clear</button>
+      <button mat-raised-button (click)="createCompany()"><mat-icon>add</mat-icon>Create Company</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,52 @@
+<div class="head">
+  <span class="headline">Add-Task</span>
+</div>
+
+
+<div class="form">
+  <div class="left">
+
+    <span class="input-title">Title</span>
+    <input type="text" placeholder="Enter a Title">
+
+    <span class="input-title">Description</span>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Enter a Description"></textarea>
+
+    <span class="input-title">Category</span>
+    <input type="text" placeholder="Enter a Category">
+
+    <span class="input-title">Assigned to</span>
+    <mat-form-field>
+      <mat-select multiple placeholder="Assigne a collegue">
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <input type="text" placeholder="Assigne Collegues">
+  </div>
+
+  <div class="right">
+
+    <span class="input-title">Due date</span>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="dd/mm/yyyy">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <span class="input-title">Priority</span>
+    <button mat-button (click)="setPrio('urgent')">Urgent</button>
+    <button mat-button (click)="setPrio('medium')">Medium</button>
+    <button mat-button (click)="setPrio('low')">Low</button>
+
+    <span class="input-title">Subtaks</span>
+    <mat-form-field class="example-full-width">
+      <input type="text" matInput placeholder="add Subtaks">
+      <mat-icon>add</mat-icon>
+    </mat-form-field>
+
+    
+    <button (click)="clearForm()">Clear</button>
+    <button mat-button (click)="createTask()" aria-hidden="false">Add Task</button>
+  </div>
+</div>

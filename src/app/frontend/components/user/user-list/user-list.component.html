@@ -1,0 +1,20 @@
+<div class="contact-list">
+    <ng-container *ngFor="let contact of userList; let i = index">
+        <div class="initials-divider"
+            *ngIf="i === 0 || contact.lastName.charAt(0) !== userList[i - 1].lastName.charAt(0)">
+            <div class="letter">
+                <span class="letters">{{ contact.lastName.charAt(0) }}</span>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+        <div class="contact" (click)="openContact(contact)">
+            <div class="initials" [style.backgroundColor]="contact.color">
+                <span class="letters">{{ contact.firstName.charAt(0) }}</span>
+            </div>
+            <div class="info">
+                <span class="name">{{ contact.firstName }} {{ contact.lastName }}</span>
+                <span class="mail">{{ contact.email }}</span>
+            </div>
+        </div>
+    </ng-container>
+</div>

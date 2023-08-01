@@ -1,0 +1,28 @@
+<div class="content">
+    <div class="login-container">
+        <span class="headliner">Login</span>
+        <div class="login-form">
+            <form [formGroup]="loginForm">
+                <div class="log">
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput formControlName="loginName">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                    </mat-form-field>
+                </div>
+                <div class="buttons">
+                    <button (click)="login()"><mat-icon>login</mat-icon>Login</button>
+                    <button (click)="createAccount()"><mat-icon>create</mat-icon>Create Account</button>
+                    <button (click)="loginService.guestLogin()"><mat-icon>login</mat-icon>Login as Guest</button>
+                </div>
+            </form>
+        </div>
+        <div class="pw-container">
+            <span class="forgot-password" routerLink="/forgot-password">Forgot Password?</span>
+            <span class="create-account" routerLink="/register">No Account? Create one!</span>
+        </div>
+    </div>
+</div>

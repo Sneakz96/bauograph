@@ -1,0 +1,96 @@
+.content {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background-color: rgb(238, 238, 238);
+    padding: 2rem;
+    border: 1px solid lightgrey;
+    width: 28rem;
+    height: 24rem;
+    border-radius: 1.2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.headliner {
+    font-size: var(--fs-l);
+    margin: 3rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.log {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    width: 80%;
+
+    span {
+        font-size: var(--fs-s);
+    }
+
+    // input {
+    //     border-radius: 3rem;
+    //     height: 1.2rem;
+    //     border: 1px solid gray;
+    //     background-color: white;
+    //     padding: 8px;
+    // }
+}
+
+.buttons {
+    margin-top: 1rem;
+    width: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: var(--bg-primary);
+    padding: 4px 8px;
+    border: none;
+    border-radius: 0.25rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.pw-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-password {
+    width: 28rem;
+    color: blue;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.create-account {
+    color: blue;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

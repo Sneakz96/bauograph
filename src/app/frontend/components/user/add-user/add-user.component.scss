@@ -1,0 +1,39 @@
+.overlay {
+    overflow-y: hidden;
+    margin: 2.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+
+    span {
+        font-size: var(--fs-s);
+        font-weight: 500;
+    }
+}
+
+.btns {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.save {
+    background-color: var(--bg-primary);
+}
+
+.close {
+    background-color: grey;
+}
+
+.mdc-button {
+    color: white !important;
+}
+
+small {
+    color: red;
+}

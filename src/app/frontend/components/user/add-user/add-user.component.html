@@ -1,0 +1,53 @@
+<div class="overlay">
+    <h2>Add User</h2>
+    <form [formGroup]="contactForm">
+        <div class="container">
+            <span>First name</span>
+            <input type="text" formControlName="firstName">
+            <small *ngIf="contactForm.controls['firstName'].errors?.['required']">*Please insert a firstname.</small>
+            <small *ngIf="contactForm.controls['firstName'].errors?.['pattern']">*Please insert only letters.</small>
+            <small *ngIf="contactForm.controls['firstName'].errors?.['minlength']">*Please insert a min. of 3
+                characters!</small>
+            <small *ngIf="contactForm.controls['firstName'].errors?.['maxlength']">*Please insert a max. of 14
+                characters!</small>
+        </div>
+        <div class="container">
+            <span>Last name</span>
+            <input type="text" formControlName="lastName">
+            <small *ngIf="contactForm.controls['lastName'].errors?.['required']">*Please insert a lastname.</small>
+            <small *ngIf="contactForm.controls['lastName'].errors?.['pattern']">*Please insert only letters.</small>
+            <small *ngIf="contactForm.controls['lastName'].errors?.['minlength']">*Please insert a min. of 3
+                characters!</small>
+            <small *ngIf="contactForm.controls['lastName'].errors?.['maxlength']">*Please insert a max. of 20
+                characters!</small>
+        </div>
+        <div class="container">
+            <span>Email</span>
+            <input type="text" formControlName="email">
+            <small *ngIf="contactForm.controls['email'].errors?.['required']">*Please insert a email.</small>
+            <small *ngIf="contactForm.controls['email'].errors?.['email']">*Please insert a email format! Should include a @</small>
+        </div>
+        <div class="container">
+            <span>Birthdate</span>
+            <input type="date" formControlName="birthdate">
+            <small *ngIf="contactForm.controls['birthdate'].errors?.['required']">*Please insert a birthdate.</small>
+            <small *ngIf="contactForm.controls['birthdate'].errors?.['pattern']">*Please insert a date form.</small>
+        </div>
+        <div class="container">
+            <span>City</span>
+            <input type="text" formControlName="city">
+            <small *ngIf="contactForm.controls['city'].errors?.['required']">*Please insert a birthdate.</small>
+            <small *ngIf="contactForm.controls['city'].errors?.['pattern']">*Please insert only letters.</small>
+        </div>
+        <div class="container">
+            <span>Plz</span>
+            <input type="number" formControlName="plz">
+            <small *ngIf="contactForm.controls['plz'].errors?.['required']">*Please insert a Plz.</small>
+            <small *ngIf="contactForm.controls['plz'].errors?.['pattern']">*Please insert a max of 5 numbers.</small>
+        </div>
+    </form>
+    <div class="btns">
+        <button mat-button class="close" (click)="close()">Close</button>
+        <button mat-button class="save" (click)="save()">Save</button>
+    </div>
+</div>

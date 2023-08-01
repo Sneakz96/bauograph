@@ -1,0 +1,19 @@
+.form {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}

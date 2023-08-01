@@ -1,0 +1,15 @@
+.content {
+    margin: 5rem;
+}
+
+.company-header-row {
+    &:hover {
+        cursor: auto;
+    }
+}
+
+.company {
+    &:hover {
+        cursor: pointer;
+    }
+}

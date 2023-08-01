@@ -1,0 +1,23 @@
+.content {
+    overflow-y: scroll;
+    margin: 5rem;
+}
+
+.table{
+    width: 50%;
+    background-color: tan;
+    max-height: 150px;
+}
+
+.list-header {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+tr{
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(218, 218, 218) !important;
+    }
+}

@@ -1,0 +1,53 @@
+<div class="head">
+    <span class="headline">User Details</span>
+</div>
+<div class="user">
+    <div class="topline">
+        <div class="initial-container">
+            <span class="initials">
+                <span>
+                    {{ user.firstName.charAt(0) }}
+                    {{ user.lastName.charAt(0) }}
+                </span>
+            </span>
+        </div>
+        <div class="user-info">
+            <span class="name">{{ user.firstName }} {{ user.lastName }}</span>
+            <span class="email">{{ user.email }}</span>
+        </div>
+    </div>
+</div>
+<div class="icons">
+    <button mat-icon-button matTooltip="Edit User" (click)="editUser()">
+        <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Delete User" (click)="deleteUser()">
+        <mat-icon>delete</mat-icon>
+    </button>
+</div>
+<div class="user-details">
+    <div class="container">
+        <span class="header">First name</span>
+        <span>{{ user.firstName }}</span>
+    </div>
+    <div class="container">
+        <span class="header">Last name</span>
+        <span>{{ user.lastName }}</span>
+    </div>
+    <div class="container">
+        <span class="header">Email</span>
+        <span>{{ user.email }}</span>
+    </div>
+    <div class="container">
+        <span class="header">Phone</span>
+        <span>{{ user.phone }}</span>
+    </div>
+    <div class="container">
+        <span class="header">City</span>
+        <span>{{ user.city }}</span>
+    </div>
+    <div class="container">
+        <span class="header">Plz</span>
+        <span>{{ user.plz }}</span>
+    </div>
+</div>

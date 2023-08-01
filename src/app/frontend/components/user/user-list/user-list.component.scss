@@ -1,0 +1,68 @@
+.contact-list {
+    background-color: lightgray;
+    width: 25rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.letter {
+    color: var(--bg-primary);
+    font-size: var(--fs-l);
+    font-weight: 300;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+}
+
+mat-divider {
+    width: 80%;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(194, 194, 194);
+    }
+}
+
+.initials {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    border: 1px solid white;
+}
+
+.letters {
+    font-size: var(--fs-s);
+    font-weight: 500;
+    color: white;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: var(--fs-m);
+}
+
+.mail {
+    color: blue;
+}

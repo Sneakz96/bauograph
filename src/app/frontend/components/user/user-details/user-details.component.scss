@@ -1,0 +1,73 @@
+.user {
+    margin: 5rem;
+    width: 25vw;
+}
+
+.topline {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.initial-container {
+    background-color: darkgrey;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.initials {
+    color: white;
+    font-size: var(--fs-l);
+    font-weight: 100;
+}
+
+.user-info {
+    margin-right: 1rem;
+    min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: var(--fs-m);
+}
+
+.email {
+    color: blue;
+}
+
+.icons {
+    width: 5rem;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 35rem;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    width: 25vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.header {
+    font-size: var(--fs-m);
+    font-weight: 500;
+}
+
+.mat-icon {
+    &:hover {
+        cursor: pointer;
+    }
+}

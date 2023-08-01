@@ -1,0 +1,13 @@
+<div class="content">
+    <app-user-list class="user-list"></app-user-list>
+    <ng-container *ngIf="router.url === '/contacts'">
+        <div class="head">
+            <span class="headline">User Overview</span>
+        </div>
+        <button mat-fab extended class="add-user" (click)="addNewUser()">
+            <mat-icon>add</mat-icon>
+            Add User
+        </button>
+    </ng-container>
+    <router-outlet *ngIf="this.router.url === '/contacts/details/002'"></router-outlet>
+</div>
